@@ -3,13 +3,33 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux'
+import {Provider} from "react-redux";
 
 
 
+let initialState = {users:[]}
 
+
+const rootReduser = (state=initialState,action) => {
+    switch (action.type){
+        case 'Fetch_Users':
+            return {...state,users: [...action.payload]}
+        case 'Add_User':
+            return {...state,users:[...state.users,action.payload]}
+
+        default:
+            return state
+    }
+}
+
+
+export let store = createStore(rootReduser)
 ReactDOM.render(
   <React.StrictMode>
+      <Provider store={store}>
     <App />
+     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
