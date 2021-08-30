@@ -3,32 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux'
-import {Provider} from "react-redux";
 
 
 
 
-
-let initialstate = {users: []}
-const rootReducer = (state = initialstate,action) => {
-   switch (action.type){
-       case 'Fetch_Users':
-           return {...state,users:[...action.payload]}
-       case 'Push_Users':
-           return {...state,users:[...state.users,action.payload]}
-
-       default:
-         return  state
-   }
-}
-
-let store = createStore(rootReducer)
 ReactDOM.render(
   <React.StrictMode>
-      <Provider store={store}>
     <App />
-     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
