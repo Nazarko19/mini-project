@@ -1,17 +1,6 @@
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
-import {addUser, fetchUsers} from "./servis/users.service";
 
 
 export default function App() {
-    let state = useSelector(state => state);
-    let {users}= state
-    let dispatch = useDispatch()
-     useEffect(()=>{
-         fetchUsers().then(value =>{
-             dispatch({type:'Fetch_Users',payload:value})
-         })
-     },[])
 
 let onSubmitForm = (e) => {
      e.preventDefault()
