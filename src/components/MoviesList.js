@@ -21,7 +21,7 @@ export default function MoviesList() {
   return (
     <div>
         {
-            movies && movies.map(value =><div key={value.id}>{value.title}</div>)
+            movies && movies.map(value =><div key={value.id}>{value.title} </div>)
         }
         <div>
             {
