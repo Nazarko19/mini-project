@@ -8,22 +8,19 @@ import {Provider} from "react-redux";
 
 
 
-let initialState = {array:[]}
-
+let initialState = {movies:[],genres:[]}
 
 const rootReduser = (state=initialState,action) => {
     switch (action.type){
         case 'getMovies':
-            return {...state,users: [...action.payload]}
-
-
-         default:
+            return {...state,movies: [...action.payload]}
+        case  'getGenres':
+           return {...state,genres:[...action.payload]}
+        default:
             return ''
     }
 }
-
-
-export let store = createStore(rootReduser)
+ let store = createStore(rootReduser)
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
