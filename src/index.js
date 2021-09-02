@@ -8,18 +8,17 @@ import {Provider} from "react-redux";
 
 
 
-let initialState = {users:[]}
+let initialState = {array:[]}
 
 
 const rootReduser = (state=initialState,action) => {
     switch (action.type){
-        case 'Fetch_Users':
+        case 'getMovies':
             return {...state,users: [...action.payload]}
-        case 'Add_User':
-            return {...state,users:[...state.users,action.payload]}
 
-        default:
-            return state
+
+         default:
+            return ''
     }
 }
 
