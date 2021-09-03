@@ -1,12 +1,17 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, } from "react";
-import {getGenres, getMovie} from "../service/serviceMovie";
+import {useEffect, useState,} from "react";
+import {getMovie, getMoviesDetails} from "../service/serviceMovie";
+import MoviesListCard from "./moviesdeteils/MoviesListCard";
 
 
-export default function MoviesList() {
+export default function MoviesList({item}) {
     let state = useSelector(state => state)
     let dispatch = useDispatch()
     let {movies} = state
+
+    let [details,setDetails]= useState([])
+
+
 
 
     useEffect(()=>{
@@ -21,6 +26,7 @@ export default function MoviesList() {
         {
             movies && movies.map(value =><div key={value.id}>{value.title} </div>)
         }
+
     </div>
   );
 }
