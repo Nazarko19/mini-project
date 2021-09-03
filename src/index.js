@@ -8,7 +8,7 @@ import {Provider} from "react-redux";
 
 
 
-let initialState = {movies:[],genres:[]}
+let initialState = {movies:[],genres:[],images:[]}
 
 const rootReduser = (state=initialState,action) => {
     switch (action.type){
@@ -16,6 +16,8 @@ const rootReduser = (state=initialState,action) => {
             return {...state,movies: [...action.payload]}
         case  'getGenres':
            return {...state,genres:[...action.payload]}
+        case 'getImages':
+            return {...state,images:[...action.payload]}
         default:
             return ''
     }

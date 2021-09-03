@@ -1,11 +1,13 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getGenres, getMovie} from "../service/serviceMovie";
+import {useEffect, useState} from "react";
+import {getGenres, getMovie, getMoviesDetails} from "../service/serviceMovie";
 
-export default function MoviesList() {
+export default function MoviesList({item}) {
     let state = useSelector(state => state)
     let dispatch = useDispatch()
     let {movies,genres} = state
+    let [deteils,setDeteils] = useState([])
+
 
     useEffect(()=>{
         getMovie().then(value => {
@@ -18,6 +20,10 @@ export default function MoviesList() {
             dispatch({type:'getGenres',payload:value.data.genres})
         })
     },[])
+
+    useEffect(()=>{
+        getMoviesDetails()
+    })
   return (
     <div>
         {
