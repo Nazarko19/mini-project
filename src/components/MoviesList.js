@@ -1,12 +1,12 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect, useState} from "react";
-import {getGenres, getMovie, getMoviesDetails} from "../service/serviceMovie";
+import {useEffect, } from "react";
+import {getGenres, getMovie} from "../service/serviceMovie";
 
-export default function MoviesList({item}) {
+
+export default function MoviesList() {
     let state = useSelector(state => state)
     let dispatch = useDispatch()
-    let {movies,genres} = state
-    let [deteils,setDeteils] = useState([])
+    let {movies} = state
 
 
     useEffect(()=>{
@@ -15,26 +15,12 @@ export default function MoviesList({item}) {
         });
     },[])
 
-    useEffect(()=>{
-        getGenres().then(value => {
-            dispatch({type:'getGenres',payload:value.data.genres})
-        })
-    },[])
 
-    useEffect(()=>{
-        getMoviesDetails()
-    })
   return (
     <div>
         {
             movies && movies.map(value =><div key={value.id}>{value.title} </div>)
         }
-        <div>
-            {
-              genres && genres.map(value=> <div>{value.name}</div>)
-            }
-        </div>
-
     </div>
   );
 }
