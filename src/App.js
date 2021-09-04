@@ -1,5 +1,5 @@
-import MoviesList from "./components/MoviesList";
 import Genres from "./components/genres/Genres";
+import MoviesLists from "./components/movieslist/MoviesLists";
 
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
 
        <div>
 
-           <MoviesList/>
+           <MoviesLists/>
            <Genres/>
 
        </div>
