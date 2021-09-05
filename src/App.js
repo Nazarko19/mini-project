@@ -1,6 +1,13 @@
 import Genres from "./components/genres/Genres";
 import MoviesLists from "./components/movieslist/MoviesLists";
-import {Link} from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Link,
+    Route
+
+
+} from "react-router-dom";
 
 export default function App() {
 
@@ -11,10 +18,11 @@ export default function App() {
 
 
        <div>
-
-           <MoviesLists/>
+           <Router>
+               <Link/>
+               <MoviesLists/>
            <Genres/>
-
+       </Router>
        </div>
   );
 }
