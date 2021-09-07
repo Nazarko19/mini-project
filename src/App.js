@@ -9,7 +9,6 @@ import {
 
 
 } from "react-router-dom";
-import MoviesDetail from "./components/moviesdeteils/MoviesDetail";
 
 export default function App() {
 
@@ -30,8 +29,6 @@ export default function App() {
                    <Route path={'/movies'} component={MoviesLists}/>
                    </div>
                    <Route path={'/genres'} component={Genres}/>
-
-                   <Route path={'/moviesDetails'} component={}/>
                </div>
        </Router>
        </div>
