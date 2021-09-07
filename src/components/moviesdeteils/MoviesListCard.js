@@ -1,3 +1,13 @@
+import {
+    BrowserRouter as Router,
+    Switch,
+    Link,
+    Route
+
+
+} from "react-router-dom";
+
+
 
 
 export default function MoviesListCard({item}) {
@@ -10,6 +20,7 @@ export default function MoviesListCard({item}) {
          <h4>Release Data: </h4> {item.release_date}
          <h4>Language:</h4> {item.original_language}
          <h4>Rating:</h4>{item.popularity}
+        <h2><Link to={'/moviesDetails'}> get details</Link></h2>
         <hr/>
     </div>
   );

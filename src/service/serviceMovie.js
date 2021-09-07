@@ -17,5 +17,9 @@ const getGenres = () => {
 }
 
 
+const getMovieDEtail = (id) => {
+    return url.get('/discover/movie' + id)
+}
 
-export {getMovie,getGenres}
+
+export {getMovie,getGenres,getMovieDEtail}

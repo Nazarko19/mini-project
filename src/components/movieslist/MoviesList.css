@@ -1,0 +1,11 @@
+.movies1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.movies1>div{
+    width: 30%;
+
+}
