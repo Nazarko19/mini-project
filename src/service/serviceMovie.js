@@ -18,7 +18,7 @@ const getGenres = () => {
 
 
 const getMovieDEtail = (id) => {
-    return url.get('/discover/movie' + id)
+    return url.get('/discover/movie'+'/' + id)
 }
 
 
