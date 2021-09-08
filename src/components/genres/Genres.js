@@ -15,10 +15,10 @@ export default function Genres() {
     },[])
 
     return (
-    <div>
+    <div className={'genres'}>
 
             {
-                genres && genres.map(value=> <div key={value.id}>{value.name}</div>)
+                genres && genres.map(value=> <div key={value.id}><h3>{value.name}</h3></div>)
             }
 
     </div>
