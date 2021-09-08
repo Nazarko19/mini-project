@@ -21,7 +21,7 @@ export default function MoviesListCard({item}) {
          <h4>Language:</h4> {item.original_language}
          <h4>Rating:</h4>{item.popularity}
 
-        <h4> <Link to={'{pathname:`/posts/${item.id}`,state:item}'}>get deteil</Link></h4>
+        <h4> <Link to={{pathname:`//${item.id}`,state:item}}>get deteil</Link></h4>
         <hr/>
     </div>
   );
