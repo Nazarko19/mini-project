@@ -30,8 +30,8 @@ export default function App() {
                    <Route path={'/movies'} component={MoviesLists}/>
                    </div>
                    <Route path={'/genres'} component={Genres}/>
-                   <Route path={'/deteil'} render={(props)=>{
-                       <MovieDeteil/>
+                   <Route path={'/movies'} render={(props)=>{
+                       <MovieDeteil />
                    }}/>
                </div>
        </Router>
