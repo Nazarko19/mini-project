@@ -9,7 +9,6 @@ import {
 
 
 } from "react-router-dom";
-import MovieDeteil from "./components/movieDeteils/MovieDeteil";
 
 export default function App() {
 
@@ -23,16 +22,13 @@ export default function App() {
            <Router>
                <div className={'header'}>
                <Link to={'/movies'}>Movies</Link>
-               <Link to={'genres'}>Genres</Link>
+               <Link to={'/genres'}>Genres</Link>
        </div>
                <div>
                    <div className={'movies'}>
-                       <Switch>
-                           <Route path={'/movies'} component={MoviesLists}/>
-                   </Switch>
+                       <Route path={'/movies'} component={MoviesLists}/>
                    </div>
-                   <Route path={'/genres'} component={Genres}/>
-                   <Route path={'/deteil'} component={MovieDeteil}/>
+                       <Route path={'/genres'} component={Genres}/>
                </div>
        </Router>
        </div>
