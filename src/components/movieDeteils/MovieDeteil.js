@@ -12,7 +12,7 @@ export default function MovieDeteil() {
 
 
   useEffect(()=>{
-    getMovieDEtail(id).then(value => {
+    getMovieDEtail().then(value => {
       dispatch({type:'getMovieDetail',payload:value.data.results})
     });
   },[])
