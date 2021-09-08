@@ -4,6 +4,7 @@ import {getMovie} from "../../service/serviceMovie";
 import MoviesListCard from "../moviesdeteils/MoviesListCard";
 import './MoviesList.css'
 import {Route} from "react-router-dom";
+import FilmDeteils from "../filmDeteils/FilmDeteils";
 
 
 
@@ -30,7 +31,9 @@ export default function MoviesLists(props) {
                 movies && movies.map(value => <MoviesListCard key={value.id} item={value}/>)
             }
 
-            <Route path={`${url}/:id`}/>
+            <Route path={`${url}/:id`} render={(props)=>{
+                return <FilmDeteils {...props}/>
+            }}/>
 
         </div>
     );
