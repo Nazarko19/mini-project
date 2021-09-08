@@ -31,10 +31,10 @@ export default function MoviesLists(props) {
             {
                 movies && movies.map(value => <MoviesListCard key={value.id} item={value}/>)
             }
-
+            <div>
             <Route path={`${url}/:id`} render={(props)=>{
                 return <FilmDeteils {...props}/>
-            }}/>
+            }}/></div>
 
         </div>
     );
