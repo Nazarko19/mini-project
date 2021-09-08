@@ -4,7 +4,7 @@ export default function FilmDeteils(props) {
     <div>
 
       {
-        state.id && {state.id}
+        state.id && <>{state.id} </>
       }
 
     </div>
