@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {getMovieDEtail} from "../../service/serviceMovie";
 
 export default function MovieDeteil() {
+  location
   let state = useSelector(state => state)
   let dispatch = useDispatch()
   let {moviesdeteil} = state
