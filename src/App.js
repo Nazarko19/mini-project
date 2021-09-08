@@ -23,7 +23,7 @@ export default function App() {
                <div className={'header'}>
                <Link to={'/movies'}>Movies</Link>
                <Link to={'/genres'}>Genres</Link>
-       </div>
+                </div>
                <div>
                    <div className={'movies'}>
                        <Route path={'/movies'} component={MoviesLists}/>
