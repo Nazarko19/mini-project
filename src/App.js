@@ -18,7 +18,7 @@ export default function App() {
     return (
 
 
-       <div>
+       <div className={'wrap'}>
            <Router>
                <div className={'header'}>
                <Link to={'/movies'}>Movies</Link>

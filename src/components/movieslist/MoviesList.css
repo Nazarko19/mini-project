@@ -3,9 +3,13 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    column-gap: 10px;
 }
 
 .movies1>div{
     width: 30%;
+    background-color: yellow;
+    margin-top: 5px;
+
 
 }
