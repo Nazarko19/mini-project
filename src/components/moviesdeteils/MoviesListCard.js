@@ -11,6 +11,8 @@ export default function MoviesListCard({item}) {
          <h4>Language:</h4> {item.original_language}
          <h4>Rating:</h4>{item.popularity}
 
+
+
         <hr/>
     </div>
   );
