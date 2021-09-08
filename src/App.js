@@ -31,7 +31,7 @@ export default function App() {
                    </div>
                    <Route path={'/genres'} component={Genres}/>
                    <Route path={'/movies'} render={(props)=>{
-                       <MovieDeteil />
+                   return   <MovieDeteil {...props}/>
                    }}/>
                </div>
        </Router>
