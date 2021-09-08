@@ -1,6 +1,7 @@
 export default function FilmDeteils(props) {
-  console.log(props)
+
   let {location:{state}} = props
+  console.log(state)
   return (
     <div>
 
