@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 
 
 export default function MoviesListCard({item}) {
+    console.log(item)
   return (
     <div className={'movieslistCard'}>
 

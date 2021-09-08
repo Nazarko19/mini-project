@@ -11,6 +11,7 @@ import {logDOM} from "@testing-library/react";
 
 export default function MoviesLists(props) {
     let {match:url} = props
+    console.log(url)
     let state = useSelector(state => state)
     let dispatch = useDispatch()
     let {movies} = state
