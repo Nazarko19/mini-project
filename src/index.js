@@ -7,22 +7,6 @@ import {Provider} from "react-redux";
 import {store} from "./redux/Store";
 
 
-
-// let initialState = {movies:[],genres:[],images:[]}
-//
-// const rootReduser = (state=initialState,action) => {
-//     switch (action.type){
-//         case 'getMovies':
-//             return {...state,movies: [...action.payload]}
-//         case  'getGenres':
-//            return {...state,genres:[...action.payload]}
-//         case 'getImages':
-//             return {...state,images:[...action.payload]}
-//         default:
-//             return ''
-//     }
-// }
- // let store = createStore(rootReduser)
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
