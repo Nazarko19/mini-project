@@ -27,10 +27,12 @@ export default function App() {
        </div>
                <div>
                    <div className={'movies'}>
-                   <Route path={'/movies'} component={MoviesLists}/>
+                       <Switch>
+                           <Route path={'/movies'} component={MoviesLists}/>
+                   </Switch>
                    </div>
                    <Route path={'/genres'} component={Genres}/>
-                   <Route path={'/movies'} component={MovieDeteil}/>
+                   <Route path={'/deteil'} component={MovieDeteil}/>
                </div>
        </Router>
        </div>
