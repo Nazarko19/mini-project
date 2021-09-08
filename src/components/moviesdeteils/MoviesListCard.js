@@ -10,5 +10,6 @@ export default function MoviesListCard({item}) {
 
        <h4> <Link to={{pathname:`/movies/${item.id}`,state:item}}>get deteils</Link></h4>
     </div>
+
   );
 }
