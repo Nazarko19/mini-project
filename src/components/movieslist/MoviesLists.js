@@ -9,7 +9,7 @@ import FilmDeteils from "../filmDeteils/FilmDeteils";
 
 
 export default function MoviesLists(props) {
-    let {match:url} = props
+    let {match:{url} = props
     console.log(url)
     let state = useSelector(state => state)
     let dispatch = useDispatch()
