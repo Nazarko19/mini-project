@@ -5,7 +5,6 @@ import MoviesListCard from "../moviesdeteils/MoviesListCard";
 import './MoviesList.css'
 import {Route} from "react-router-dom";
 import FilmDeteils from "../filmDeteils/FilmDeteils";
-import {logDOM} from "@testing-library/react";
 
 
 
