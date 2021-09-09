@@ -9,8 +9,8 @@ import FilmDeteils from "../filmDeteils/FilmDeteils";
 
 
 export default function MoviesLists(props) {
-    let {match:{url} = props
-    console.log(url)
+    let {match:{url}} = props
+    // console.log(url)
     let state = useSelector(state => state)
     let dispatch = useDispatch()
     let {movies} = state
@@ -28,10 +28,12 @@ export default function MoviesLists(props) {
 
     return (
         <div className={'movies1'}>
+            <div className={'movies2'}>
             {
                 movies && movies.map(value => <MoviesListCard key={value.id} item={value}/>)
             }
-            <div>
+            </div>
+            <div className={'FilmDeteils'}>
             <Route path={`${url}/:id`} render={(props)=>{
                 return <FilmDeteils {...props}/>
             }}/></div>

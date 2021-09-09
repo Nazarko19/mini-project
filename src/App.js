@@ -10,8 +10,8 @@ import {
 
 } from "react-router-dom";
 
-export default function App() {
 
+export default function App(props) {
 
 
 
@@ -29,6 +29,8 @@ export default function App() {
                        <Route path={'/movies'} component={MoviesLists}/>
                    </div>
                        <Route path={'/genres'} component={Genres}/>
+                  <div>
+                  </div>
                </div>
        </Router>
        </div>

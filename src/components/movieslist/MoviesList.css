@@ -1,4 +1,4 @@
-.movies1{
+.movies2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -6,9 +6,17 @@
     column-gap: 10px;
 }
 
-.movies1>div{
+.movies2>div{
     width: 30%;
     background-color: yellow;
     margin-top: 5px;
     border-radius: 30px;
+}
+.FilmDeteils{
+    display: flex;
+    margin-left: 450px;
+    text-align: center;
+    background-color: pink;
+    width: 400px;
+    border-radius: 100px;
 }
